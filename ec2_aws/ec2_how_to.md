@@ -83,7 +83,8 @@ You can find the last part of that here:
 
 ![Screenshot 2023-09-27 143213.png](images%2FScreenshot%202023-09-27%20143213.png)
 
-Your screen should look like this, type yes
+Your screen should look like this, type yes <br>
+
 ![Screenshot 2023-09-27 143529.png](images%2FScreenshot%202023-09-27%20143529.png)
 
 Next type these codes in 1 by 1 to update the system, install nginx and start it:
