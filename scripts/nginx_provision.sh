@@ -10,3 +10,6 @@ sudo apt install nginx -y
 sudo systemctl restart nginx
 # enable nginx
 sudo systemctl enable nginx
+
+#./provision to run the code
+
