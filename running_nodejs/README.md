@@ -34,6 +34,8 @@ Your screen should look something like this once you `ls` to check the files: <b
 
 ## Step 3: Set Up the Environment
 
+**GO INTO THE DIRECTORY WHERE YOUR APPLICATION CODE IS LOCATED**
+
 ### Install Node.js and npm
 
 - NOTE: We are going to be using an older version of Node.js since our application is only compatible with that version
