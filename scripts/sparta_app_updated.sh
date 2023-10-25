@@ -2,20 +2,23 @@
 
 # update & upgrade
 sudo apt update -y
-sudo apt upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y -o Dpkg::Options::="--force-confnew"
 
 # install nginx
 sudo apt install nginx -y
-
 
 # setup nginx reverse proxy
 sudo apt install sed
 # $ and / characters must be escaped by putting a backslash before them
 sudo sed -i "s/try_files \$uri \$uri\/ =404;/proxy_pass http:\/\/localhost:3000\/;/" /etc/nginx/sites-available/default
 
-# restart nginx 
+# restart nginx
 sudo systemctl restart nginx
+
+#enable nginx
+
 sudo systemctl enable nginx
+
 # install nodejs 12.x
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install nodejs -y
@@ -24,10 +27,12 @@ sudo apt-get install nodejs -y
 sudo npm install pm2 -g
 
 # clone repo with app folder into folder called 'repo' - only needed if don't have the app folder already
-git clone https://github.com/LSF970/sparta_test_app.git repo
+sudo apt install git -y
+
+git clone https://github.com/shaluomehra/sparta_test_app.git
 
 # install the app (must be after db vm is finished provisioning)
-cd repo
+cd sparta_test_app
 cd app
 npm install
 
